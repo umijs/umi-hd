@@ -1,0 +1,64 @@
+{
+  "name": "umi-hd",
+  "version": "5.0.1",
+  "description": "移动端高清1px方案",
+  "homepage": "https://github.com/umijs/umi-hd",
+  "author": "写轮 <kai.fangk@alibaba-inc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-hd"
+  },
+  "bugs": "issues url",
+  "main": "./lib/vl",
+  "entry": {
+    "flex": "./src/flex",
+    "vw": "./src/vw",
+    "vw-no-android-hd": "./src/vw-no-android-hd",
+    "vl": "./src/vl",
+    "vh": "./src/vh"
+  },
+  "scripts": {
+    "prepublish": "tnpm run compile",
+    "compile": "rm -rf lib && babel -d lib src",
+    "build": "atool-build",
+    "lint": "eslint --ext .js src",
+    "test": "atool-test",
+    "doc": "atool-doc",
+    "doc-build": "atool-doc --build",
+    "gh-pages": "atool-doc --build && gh-pages -d __site"
+  },
+  "devDependencies": {
+    "atool-build": "0.6.x",
+    "atool-doc": "^0.1.0",
+    "atool-test": "^0.4.5",
+    "babel-cli": "~6.6.4",
+    "babel-core": "~6.7.4",
+    "babel-plugin-add-module-exports": "~0.1.2",
+    "babel-preset-es2015": "~6.6.0",
+    "babel-preset-stage-0": "~6.5.0",
+    "dora": "0.3.x",
+    "gh-pages": "^0.11.0",
+    "pre-commit": "^1.1.2",
+    "eslint": "^2.5.3",
+    "eslint-config-airbnb": "^6.2.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "license": "MIT",
+  "files": [
+    "lib/",
+    "package.json",
+    "README.md",
+    "HISTORY.md"
+  ]
+}

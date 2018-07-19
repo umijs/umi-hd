@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>vh - 根据高度放大缩小</title>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="format-detection" content="email=no"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <!--vh模式-->
+  <script>!function(e){function t(n){if(i[n])return i[n].exports;var a=i[n]={exports:{},id:n,loaded:!1};return e[n].call(a.exports,a,a.exports,t),a.loaded=!0,a.exports}var i={};return t.m=e,t.c=i,t.p="",t(0)}([function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i=window;t["default"]=i.vh=function(e,t){var n=e||100,a=t||1270,r=i.document,o=navigator.userAgent,d=o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),l=o.match(/U3\/((\d+|\.){5,})/i),s=l&&parseInt(l[1].split(".").join(""),10)>=80,p=navigator.appVersion.match(/(iphone|ipad|ipod)/gi),c=i.devicePixelRatio||1,u=r.documentElement,m=1,v=1/c;if(p);else if(d&&d[1]>534||s){u.style.fontSize=n+"px";var f=r.createElement("div");f.setAttribute("style","width: 1rem;display:none"),u.appendChild(f);var h=i.getComputedStyle(f).width;if(u.removeChild(f),h!==u.style.fontSize){var x=parseInt(h,10);m=100/x,v*=m}}else v=1;var w=r.querySelector('meta[name="viewport"]');w||(w=r.createElement("meta"),w.setAttribute("name","viewport"),r.head.appendChild(w)),w.setAttribute("content","width=device-width,user-scalable=no,initial-scale="+v+",maximum-scale="+v+",minimum-scale="+v);var y=function(){u.style.fontSize=n/a*u.clientHeight*m+"px"};y(),i.addEventListener("resize",y)},e.exports=t["default"]}]);
+  vh(100, 1072);</script>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="index-wrap index-friend">
+
+  </div>
+  <div class="nav-bar">
+    <a href="index-plan.html" class="nav nav-plan"></a>
+    <a class="nav nav-friend nav-selected"></a>
+    <a href="index-my.html" class="nav nav-my"><span class="icon icon-red">3</span></a>
+  </div>
+</body>
+</html>

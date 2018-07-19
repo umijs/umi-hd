@@ -1,0 +1,14 @@
+{
+  "extends": "eslint-config-airbnb/base",
+  "rules": {
+    "no-console": [0],
+    "max-len": ["error", 200]
+  },
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "ecmaFeatures": {
+    "experimentalObjectRestSpread": true
+  }
+}

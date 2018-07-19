@@ -1,0 +1,7 @@
+dist/
+node_modules/
+lib/
+www/
+coverage/
+npm-debug.log
+.DS_Store
